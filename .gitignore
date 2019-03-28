@@ -1,25 +1,33 @@
-# CakePHP 3
+/storage
+.DS_Store
 
-/vendor/*
-/config/app.php
+.fast-cgi-bin
+log
 
-/tmp/cache/models/*
-!/tmp/cache/models/empty
-/tmp/cache/persistent/*
-!/tmp/cache/persistent/empty
-/tmp/cache/views/*
-!/tmp/cache/views/empty
-/tmp/sessions/*
-!/tmp/sessions/empty
-/tmp/tests/*
-!/tmp/tests/empty
+.php_cs.cache
+.phplint-cache
 
-/logs/*
-!/logs/empty
+/bower_components
+/node_modules
 
-# CakePHP 2
+/public/css
+/public/js
+/public/thumbs/*
+/public/storage
+/public/libraries/qr-scanner/node_modules
 
-/app/tmp/*
-/app/Config/core.php
-/app/Config/database.php
-/vendors/*
+/storage/*.key
+/vendor
+/public/fonts/vendor
+/.idea
+/.vagrant
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+.env
+.env.*
+/nbproject
+/.vscode
+
+!.gitkeep
