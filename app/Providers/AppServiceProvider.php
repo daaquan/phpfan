@@ -3,7 +3,6 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Inertia\Inertia;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,38 +23,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if (\App::environment('production', 'staging')) {
-            //\URL::forceScheme('https');
-        }
-
-        // make forumChannels available with every view
-        //view()->share('channels', \Channels::get());
-
-        //$this->bootInertia();
-    }
-
-    /**
-     * Initialize inertia js
-     */
-    private function bootInertia() : void
-    {
-        // Boot inertia here. For example the version, the errors handlers...
-
-        // Share the translations data in the props of the components.
-        Inertia::share([
-            'app' => [
-                'name' => config('app.name'),
-                'locale' => $this->app->getLocale(),
-
-                // You can add a `locales => ['fr', 'en']` in your config.app
-                // to represent you app supported locales.
-                'locales' => config('app.locales'),
-
-                // Here we properly return the translation to Vue.
-                // Note that it is lazy loaded, so Inertia will not load the translations in every request.
-                // Inertia will load only on demand. Using, VueJs, will call this method only once, when the app is open.
-                'translations' => fn() => translations($this->app->getLocale())
-            ],
-        ]);
+        //
     }
 }
